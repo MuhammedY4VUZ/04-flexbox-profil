@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, ScrollView } from 'react-native';
 
-// Ödev Görevi 3: İstatistik kutusunu bağımsız bir bileşene çevirme (StatKutusu)
+// Odev Gorevi 3: Istatistik kutusunu bagimsiz bir bilesene cevirme (StatKutusu)
 function StatKutusu({ deger, ad, renk = '#2563eb' }) {
   return (
     <View style={styles.kutu}>
@@ -14,41 +14,41 @@ function StatKutusu({ deger, ad, renk = '#2563eb' }) {
 export default function App() {
   return (
     <ScrollView style={styles.ekran} contentContainerStyle={styles.icerik}>
-      {/* Profil Başlık Kartı */}
+      {/* Profil Baslik Karti */}
       <View style={styles.profilKarti}>
-        {/* Ödev Görevi 2: Projedeki assets klasöründen görsel yükleme (icon / avatar) */}
+        {/* Odev Gorevi 2: Projedeki assets klasorunden gorsel yukleme (icon / avatar) */}
         <Image
           source={require('./assets/icon.png')}
           style={styles.avatar}
         />
         <Text style={styles.isim}>Kahraman Kaan</Text>
-        <Text style={styles.sinif}>Seviye 7 · Ejderha Savaşçısı</Text>
+        <Text style={styles.sinif}>Seviye 7 · Ejderha Savascisi</Text>
         
         <View style={styles.rozetler}>
-          <Text style={styles.rozet}>🛡️ Muhafız</Text>
-          <Text style={styles.rozet}>⚡ Yıldırım Klanı</Text>
+          <Text style={styles.rozet}>🛡️ Muhafiz</Text>
+          <Text style={styles.rozet}>⚡ Yildirim Klani</Text>
         </View>
       </View>
 
-      {/* İstatistikler Başlığı */}
+      {/* Istatistikler Basligi */}
       <Text style={styles.bolumBasligi}>Karakter Nitelikleri</Text>
 
-      {/* Ödev Görevi 1 & Flexbox: 4 istatistik kutusu (Zeka eklendi!) yan yana / ızgara düzeninde */}
+      {/* Odev Gorevi 1 & Flexbox: 4 istatistik kutusu (Zeka eklendi!) yan yana / izgara duzeninde */}
       <View style={styles.istatistikSatir}>
         <StatKutusu deger={120} ad="Can" renk="#e11d48" />
-        <StatKutusu deger={45} ad="Güç" renk="#d97706" />
-        <StatKutusu deger={30} ad="Hız" renk="#16a34a" />
-        {/* Ödevde istenen 4. istatistik: Zeka */}
+        <StatKutusu deger={45} ad="Guc" renk="#d97706" />
+        <StatKutusu deger={30} ad="Hiz" renk="#16a34a" />
+        {/* Odevde istenen 4. istatistik: Zeka */}
         <StatKutusu deger={85} ad="Zeka" renk="#7c3aed" />
       </View>
 
-      {/* Ek Bilgi / Hikaye Bölümü */}
+      {/* Ek Bilgi / Hikaye Bolumu */}
       <View style={styles.hikayeKutusu}>
         <Text style={styles.hikayeBaslik}>📜 Karakter Hikayesi</Text>
         <Text style={styles.aciklama}>
-          Kaan, kuzey dağlarından gelen cesur bir savaşçıdır. Kadim ejderha kristallerini korumak
-          için eğitilmiş, kılıç ustalığı ve yüksek zekasıyla krallığın en saygın muhafızlarından
-          biri olmuştur.
+          Kaan, kuzey daglarindan gelen cesur bir savascidir. Kadim ejderha kristallerini korumak
+          icin egitilmis, kilic ustaligi ve yuksek zekasiyla kralligin en saygin muhafizlarindan
+          biri olmustur.
         </Text>
       </View>
     </ScrollView>
